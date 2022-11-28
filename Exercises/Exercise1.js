@@ -16,10 +16,20 @@ class Employee {
     this.jobTitle = newJobTitle;
     this.payRate = newPayRate;
   }
+
+  getIntro() {
+    return ("Hi! I'm " + this.firstName + " " + this.lastName + " and I am a " + this.jobTitle);
+  }
 }
+
 
 let employee1 = new Employee(1, "Ian", "Auston", "Graphic Artist", 42.5);
 let employee2 = new Employee(2, "Ezio", "Auditore", "Protector", 100.5);
+
+let intro = employee1.getIntro();
+console.log(intro);
+let intro2 = employee2.getIntro();
+console.log(intro2);
 
 employee1.promote("Sr. Graphic Artist", 46.75);
 employee2.promote("Sr. Protector", 200.5);
